@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.('.svg')
-    );
+    const fileLoaderRule = config.module.rules.find(rule => rule.test?.test?.('.svg'));
 
     config.module.rules.push(
       {
@@ -23,7 +21,7 @@ const nextConfig = {
             },
           },
         ],
-      }
+      },
     );
 
     fileLoaderRule.exclude = /\.svg$/i;
