@@ -27,8 +27,8 @@ const Footer: FC = () => {
 
   const colorDot: IColorClsx = {
     'text-purple-700': pathname === URLS.HOME,
-    'text-neutral-700': !hover && pathname === URLS.ABOUT,
-    'text-danger-700': (hover && pathname === URLS.ABOUT) || pathname === URLS.REAL_ME,
+    'text-neutral-700': (!hover && pathname === URLS.ABOUT) || (hover && pathname === URLS.REAL_ME),
+    'text-danger-700': (!hover && pathname === URLS.REAL_ME) || (hover && pathname === URLS.ABOUT),
     'text-warning-700': pathname === URLS.PROJECTS,
     'text-success-700': pathname === URLS.BLOG,
   };
@@ -36,9 +36,12 @@ const Footer: FC = () => {
   const Wrapper: FC<PropsWithChildren> = ({ children }) => {
     let Element: JSX.Element;
 
-    if (pathname === URLS.ABOUT) {
+    if (pathname === URLS.ABOUT || pathname === URLS.REAL_ME) {
       Element = (
-        <Link className='w-full h-full flex justify-center items-center' href={URLS.REAL_ME}>
+        <Link
+          className='w-full h-full flex justify-center items-center'
+          href={pathname === URLS.ABOUT ? URLS.REAL_ME : URLS.ABOUT}
+        >
           {children}
         </Link>
       );
@@ -59,6 +62,7 @@ const Footer: FC = () => {
               {
                 ...colorDot,
                 'hover:text-danger-700 cursor-pointer': pathname === URLS.ABOUT,
+                'hover:text-neutral-700 cursor-pointer': pathname === URLS.REAL_ME,
               },
             )}
           >

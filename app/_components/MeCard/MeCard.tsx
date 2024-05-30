@@ -2,18 +2,15 @@
 
 import { FC } from 'react';
 import { Card, CardHeader, CardBody } from '@nextui-org/react';
-import { usePathname } from 'next/navigation';
 
 import { IContent, IMeCard } from '@global/interfaces';
 import { useMeStore } from '@store';
-import { URLS } from '@global/enums';
 
 interface IProps extends IMeCard {}
 
 const MeCard: FC<IProps> = ({ label, contents }) => {
   const { setHover } = useMeStore();
-  const pathname: string = usePathname();
-  const isItMe: boolean = label === 'Me' && pathname !== URLS.REAL_ME;
+  const isItMe: boolean = label === 'Me';
 
   const onMouseEnter = (): void => setHover(isItMe);
   const onMouseLeave = (): void => setHover(false);
