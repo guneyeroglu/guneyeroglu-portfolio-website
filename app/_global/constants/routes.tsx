@@ -8,22 +8,22 @@ import { IRoute } from '../interfaces';
 export const routes: IRoute[] = [
   {
     icon: House,
-    path: URLS.HOME,
+    pathname: URLS.HOME,
     title: 'Home',
   },
   {
     icon: User,
-    path: URLS.ABOUT,
+    pathname: URLS.ABOUT,
     title: 'About',
   },
   {
     icon: Desktop,
-    path: URLS.PROJECTS,
+    pathname: URLS.PROJECTS,
     title: 'Projects',
   },
   {
     icon: Files,
-    path: URLS.BLOG,
+    pathname: URLS.BLOG,
     title: 'Blog',
   },
 ];

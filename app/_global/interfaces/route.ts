@@ -4,6 +4,6 @@ import { URLS } from '../enums/urls';
 
 export interface IRoute {
   icon: Icon;
-  path: URLS;
+  pathname: URLS;
   title: string;
 }
