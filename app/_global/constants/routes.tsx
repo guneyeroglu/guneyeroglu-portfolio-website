@@ -31,6 +31,6 @@ export const routes: IRoute[] = [
   {
     icon: Spider,
     pathname: URLS.REAL_ME,
-    title: 'Real Me',
+    title: 'Spidey',
   },
 ];

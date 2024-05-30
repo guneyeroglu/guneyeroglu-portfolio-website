@@ -20,7 +20,7 @@ const me: IContent[] = [
   },
 ];
 
-const experience: IContent[] = [
+const experiences: IContent[] = [
   {
     title: 'Job',
     description: 'Front-End Developer @LC Waikiki',
@@ -31,7 +31,7 @@ const experience: IContent[] = [
   },
 ];
 
-const education: IContent[] = [
+const educations: IContent[] = [
   {
     title: 'School',
     description: "Uludağ Üniversitesi '20",
@@ -42,7 +42,7 @@ const education: IContent[] = [
   },
 ];
 
-const skill: IContent[] = [
+const skills: IContent[] = [
   {
     title: 'Language',
     description: 'JavaScript/TypeScript, Go',
@@ -63,15 +63,15 @@ export const meCards: IMeCard[] = [
     contents: me,
   },
   {
-    label: 'Work Experience',
-    contents: experience,
+    label: 'Work Experiences',
+    contents: experiences,
   },
   {
     label: 'Educations',
-    contents: education,
+    contents: educations,
   },
   {
     label: 'Skills',
-    contents: skill,
+    contents: skills,
   },
 ];

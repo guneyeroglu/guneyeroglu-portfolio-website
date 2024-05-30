@@ -20,7 +20,7 @@ const me: IContent[] = [
   },
 ];
 
-const experience: IContent[] = [
+const experiences: IContent[] = [
   {
     title: 'Job',
     description: 'Super Hero @Avengers',
@@ -31,7 +31,7 @@ const experience: IContent[] = [
   },
 ];
 
-const education: IContent[] = [
+const educations: IContent[] = [
   {
     title: 'School',
     description: "Avengers Hero School '12",
@@ -42,13 +42,13 @@ const education: IContent[] = [
   },
 ];
 
-const skill: IContent[] = [
+const skills: IContent[] = [
   {
     title: 'Powers',
     description: 'Superhuman strength, speed, agility, and reflexes, Spider-Sense, wall-crawling',
   },
   {
-    title: 'Combat Skills',
+    title: 'Combats',
     description:
       'Expert hand-to-hand combatant, skilled acrobat, proficient in various martial arts.',
   },
@@ -69,15 +69,15 @@ export const meCards: IMeCard[] = [
     contents: me,
   },
   {
-    label: 'Work Experience',
-    contents: experience,
+    label: 'Work Experiences',
+    contents: experiences,
   },
   {
     label: 'Educations',
-    contents: education,
+    contents: educations,
   },
   {
     label: 'Skills',
-    contents: skill,
+    contents: skills,
   },
 ];
