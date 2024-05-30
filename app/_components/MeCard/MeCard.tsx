@@ -1,36 +1,27 @@
 import { FC } from 'react';
 import { Card, CardHeader, CardBody } from '@nextui-org/react';
-import { IContent } from '@global/interfaces';
+import { IContent, IMeCard } from '@global/interfaces';
 
-interface IProps {
-  header: string;
-  contents: IContent[];
-}
+interface IProps extends IMeCard {}
 
-const MeCard: FC<IProps> = ({ header, contents }) => {
-  const titles: string[] = contents.map((content: IContent) => content.title);
-  const descriptions: string[] = contents.map((content: IContent) => content.description);
+const MeCard: FC<IProps> = ({ label, contents }) => {
+  // const titles: string[] = contents.map((content: IContent) => content.title);
+  // const descriptions: string[] = contents.map((content: IContent) => content.description);
 
   return (
-    <Card className='border-1 border-neutral-200/disabled border-l-0 border-r-0' isHoverable>
+    <Card className='w-1/2 border-1 border-neutral-200/disabled border-l-0 border-r-0' isHoverable>
       <CardHeader className='justify-center border-b-1 border-b-divider'>
-        <span className='text-2xl '>{header}</span>
+        <span className='text-2xl '>{label}</span>
       </CardHeader>
-      <CardBody className='flex flex-row justify-start items-center gap-2'>
-        <div className='flex flex-col justify-start items-end'>
-          {titles.map((title: string) => (
-            <span key={title} className='font-medium text-neutral-200'>
-              {title}:
+      <CardBody>
+        {contents.map((content: IContent) => (
+          <div key={content.title} className='w-full flex justify-start items-start gap-2'>
+            <span className='min-w-[20%] font-medium text-neutral-200 text-end'>
+              {content.title}:
             </span>
-          ))}
-        </div>
-        <div className='flex flex-col justify-start items-start'>
-          {descriptions.map((description: string) => (
-            <span key={description} className='text-neutral-200/disabled'>
-              {description}
-            </span>
-          ))}
-        </div>
+            <span className='text-neutral-200/disabled'>{content.description}</span>
+          </div>
+        ))}
       </CardBody>
     </Card>
   );
