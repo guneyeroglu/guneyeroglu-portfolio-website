@@ -3,4 +3,5 @@ export enum URLS {
   ABOUT = '/about',
   PROJECTS = '/projects',
   BLOG = '/blog',
+  REAL_ME = '/real-me',
 }

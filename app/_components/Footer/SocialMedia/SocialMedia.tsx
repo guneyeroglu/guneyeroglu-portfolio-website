@@ -15,6 +15,7 @@ const SocialMedia: FC = () => {
   const color: IColorClsx = {
     'hover:text-purple-700/hover': pathname === URLS.HOME,
     'hover:text-neutral-700/hover': pathname === URLS.ABOUT,
+    'hover:text-danger-700/hover': pathname === URLS.REAL_ME,
     'hover:text-warning-700/hover': pathname === URLS.PROJECTS,
     'hover:text-success-700/hover': pathname === URLS.BLOG,
   };

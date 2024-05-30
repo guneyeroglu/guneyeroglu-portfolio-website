@@ -14,12 +14,13 @@ const Header: FC = () => {
   const color: IColorClsx = {
     'text-purple-700': pathname === URLS.HOME,
     'text-neutral-700': pathname === URLS.ABOUT,
+    'text-danger-700': pathname === URLS.REAL_ME,
     'text-warning-700': pathname === URLS.PROJECTS,
     'text-success-700': pathname === URLS.BLOG,
   };
 
   return (
-    <header className='flex justify-between items-center h-14'>
+    <header className='fixed inset-4 flex justify-between items-center h-14'>
       <div className='h-full flex flex-1 justify-start items-center border-1 border-divider border-l-0 border-r-0'>
         <div
           className={clsx(
@@ -39,7 +40,9 @@ const Header: FC = () => {
             className={clsx({
               ...color,
             })}
-          >{` <Eroğlu />`}</span>
+          >
+            {' <Eroğlu />'}
+          </span>
         </h1>
       </div>
       <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0 border-r-0'>

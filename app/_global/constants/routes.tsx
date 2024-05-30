@@ -2,6 +2,8 @@
 
 import { Desktop, Files, House, User } from '@phosphor-icons/react';
 
+import { Spider } from '@assets/images';
+
 import { URLS } from '../enums/urls';
 import { IRoute } from '../interfaces';
 
@@ -25,5 +27,10 @@ export const routes: IRoute[] = [
     icon: Files,
     pathname: URLS.BLOG,
     title: 'Blog',
+  },
+  {
+    icon: Spider,
+    pathname: URLS.REAL_ME,
+    title: 'Real Me',
   },
 ];

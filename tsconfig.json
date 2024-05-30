@@ -24,6 +24,8 @@
       "@components/*": ["./app/_components/*"],
       "@global": ["./app/_global"],
       "@global/*": ["./app/_global/*"],
+      "@store": ["./app/_store"],
+      "@store/*": ["./app/_store/*"],
       "@route": ["./app/(route)"],
       "@route/*": ["./app/(route)/*"]
     }
