@@ -1,3 +1,4 @@
+import { TECHS } from '@global/enums';
 import { IMyProject } from '@global/interfaces';
 
 export const myProjects: IMyProject[] = [
@@ -6,7 +7,7 @@ export const myProjects: IMyProject[] = [
     image: '',
     details: {
       link: 'https://lcwaikikiclone.vercel.app',
-      techs: ['React', 'JavaScript', 'SCSS'],
+      techs: [TECHS.React, TECHS.JavaScript, TECHS.SCSS],
       description: '',
       images: [''],
     },
@@ -16,7 +17,7 @@ export const myProjects: IMyProject[] = [
     image: '',
     details: {
       link: 'https://wiki-rickandmorty.vercel.app',
-      techs: ['React', 'JavaScript', 'SCSS'],
+      techs: [TECHS.React, TECHS.JavaScript, TECHS.SCSS],
       description: '',
       images: [''],
     },
@@ -26,7 +27,17 @@ export const myProjects: IMyProject[] = [
     image: '',
     details: {
       link: 'https://riotgamesallinone.vercel.app',
-      techs: ['React', 'TypeScript', 'SCSS'],
+      techs: [TECHS.React, TECHS.TypeScript, TECHS.SCSS],
+      description: '',
+      images: [''],
+    },
+  },
+  {
+    title: 'House Rent Web App',
+    image: '',
+    details: {
+      link: 'https://rent-house-ng.vercel.app/home',
+      techs: [TECHS.Angular, TECHS.TypeScript, TECHS.SCSS],
       description: '',
       images: [''],
     },
@@ -36,7 +47,7 @@ export const myProjects: IMyProject[] = [
     image: '',
     details: {
       link: 'https://wander-wheels.vercel.app',
-      techs: ['React', 'TypeScript', 'Tailwind', 'Go', 'Fiber'],
+      techs: [TECHS.React, TECHS.TypeScript, TECHS.Tailwind, TECHS.Go, TECHS.Fiber],
       description: '',
       images: [''],
     },
