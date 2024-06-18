@@ -76,7 +76,7 @@ const Footer: FC = () => {
         <span className='text-base font-normal text-neutral-400'>
           Created by
           <Link
-            href={URLS.HOME}
+            href={URLS.ABOUT}
             className={clsx('text-neutral-500 cursor-pointer', {
               ...color,
             })}
