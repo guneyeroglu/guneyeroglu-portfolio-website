@@ -13,10 +13,11 @@ const Layout: FC<IProps> = ({ children }) => {
       <Header />
       <div className='flex flex-1 justify-start items-stretch m-[calc(1rem_+_56px)] mr-0 overflow-hidden'>
         <Sidebar />
-        <main className='w-full overflow-y-auto p-2 pr-[calc(0.5rem_+_1rem)]'>
+        <main className='relative w-full overflow-y-auto p-2 pr-[calc(0.5rem_+_1rem)]'>
           {children}
           <BackgroundCircles />
         </main>
+        <div className='fixed w-[1px] bg-divider right-4 top-[calc(1rem_+_56px)] bottom-[calc(1rem_+_56px)]' />
       </div>
       <Footer />
     </div>
