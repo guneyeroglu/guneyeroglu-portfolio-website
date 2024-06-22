@@ -34,7 +34,7 @@ const experiences: IContent[] = [
 const educations: IContent[] = [
   {
     title: 'School',
-    description: "Uludağ Üniversitesi '20",
+    description: "Uludağ University '20",
   },
   {
     title: 'Program',
