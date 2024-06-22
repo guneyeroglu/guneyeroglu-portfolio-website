@@ -27,7 +27,7 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
         },
       )}
     >
-      <button className='relative max-w-[500px] w-full h-72 cursor-pointer text-neutral-200 transition-all hover:text-warning-700 hover:scale-105 max-lg:max-w-full'>
+      <button className='relative max-w-[500px] w-full h-72 cursor-pointer text-neutral-200 transition-all hover:text-warning-700 hover:scale-105 max-lg:max-w-full max-lg:hover:scale-100'>
         <div
           key={id}
           className='w-full h-full opacity-85 ml-8 rounded-lg transition-all brightness-50 hover:brightness-100'
