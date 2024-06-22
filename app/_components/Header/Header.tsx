@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { usePathname } from 'next/navigation';
-import { Code, List } from '@phosphor-icons/react';
+import { Code } from '@phosphor-icons/react';
 import clsx from 'clsx';
 
 import { URLS } from '@global/enums';
@@ -21,7 +21,7 @@ const Header: FC = () => {
 
   return (
     <header className='fixed inset-4 flex justify-between items-center h-14'>
-      <div className='h-full flex flex-1 justify-start items-center border-1 border-divider border-l-0 border-r-0'>
+      <div className='h-full border-1 border-divider border-l-0 border-r-0'>
         <div
           className={clsx(
             'w-14 h-full flex justify-center items-center border-1 border-divider border-t-0 border-b-0',
@@ -33,7 +33,7 @@ const Header: FC = () => {
           <Code size={32} color='currentColor' />
         </div>
       </div>
-      <div className='flex flex-1 h-full justify-center items-center border-1 border-divider border-l-0 border-r-0'>
+      <div className='flex flex-1 h-full justify-center items-center border-1 border-divider border-l-0'>
         <h1 className='text-xl text-neutral-200'>
           Güney
           <span
@@ -44,11 +44,6 @@ const Header: FC = () => {
             {' <Eroğlu />'}
           </span>
         </h1>
-      </div>
-      <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0 border-r-0'>
-        <div className='w-14 h-full flex justify-center items-center text-neutral-200 border-r-1 border-r-divider'>
-          <List size={32} color='currentColor' className='hidden max-xl:block' />
-        </div>
       </div>
     </header>
   );

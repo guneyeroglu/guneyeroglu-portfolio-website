@@ -19,12 +19,15 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
 
   return (
     <div
-      className={clsx('flex justify-center items-center', {
-        'basis-1/2': id % 3 !== 0 || id === 1 || id === 2,
-        'basis-full': id % 3 === 0,
-      })}
+      className={clsx(
+        'flex justify-center items-center px-8 max-lg:basis-full max-lg:px-0 max-lg:pr-8',
+        {
+          'min-[1024px]:basis-1/2': id % 3 !== 0 || id === 1 || id === 2,
+          'min-[1024px]:basis-full': id % 3 === 0,
+        },
+      )}
     >
-      <button className='relative w-[500px] h-72 cursor-pointer text-neutral-200 transition-all hover:text-warning-700 hover:scale-105'>
+      <button className='relative max-w-[500px] w-full h-72 cursor-pointer text-neutral-200 transition-all hover:text-warning-700 hover:scale-105 max-lg:max-w-full'>
         <div
           key={id}
           className='w-full h-full opacity-85 ml-8 rounded-lg transition-all brightness-50 hover:brightness-100'

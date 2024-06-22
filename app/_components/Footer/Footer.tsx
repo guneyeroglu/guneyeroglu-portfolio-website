@@ -72,7 +72,7 @@ const Footer: FC = () => {
           </div>
         </Tooltip>
       </div>
-      <div className='h-full flex flex-1 justify-center items-center border-1 border-divider border-l-0 border-r-0'>
+      <div className='h-full flex flex-1 justify-center items-center border-1 border-divider border-l-0 border-r-0 max-md:hidden'>
         <span className='text-base font-normal text-neutral-400'>
           Created by
           <Link
