@@ -52,10 +52,37 @@ const Footer: FC = () => {
     return Element;
   };
 
+  const handleTooltipColor = (): string => {
+    switch (pathname) {
+      case URLS.ABOUT:
+        return 'bg-danger-700';
+      case URLS.REAL_ME:
+        return 'bg-neutral-700';
+      default:
+        return 'bg-neutral-700';
+    }
+  };
+
+  const handleTooltipText = (): string => {
+    switch (pathname) {
+      case URLS.ABOUT:
+        return 'Go Tiger!';
+      case URLS.REAL_ME:
+        return 'Go Back Web-Head';
+      default:
+        return '';
+    }
+  };
+
   return (
-    <footer className='fixed inset-4 top-auto flex justify-between items-center h-14'>
+    <footer className='fixed inset-4 top-auto flex justify-between items-center h-14 border-r-1 border-r-divider'>
       <div className='h-full flex flex-1 justify-start items-center border-1 border-divider border-l-0 border-r-0'>
-        <Tooltip isDisabled={pathname !== URLS.ABOUT} content='Go Tiger!'>
+        <Tooltip
+          isDisabled={pathname !== URLS.ABOUT && pathname !== URLS.REAL_ME}
+          content={handleTooltipText()}
+          placement='right'
+          className={handleTooltipColor()}
+        >
           <div
             className={clsx(
               'w-14 h-full flex justify-center items-center border-1 border-divider border-t-0 border-b-0 cursor-default',
@@ -86,7 +113,7 @@ const Footer: FC = () => {
           ©2024™
         </span>
       </div>
-      <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0'>
+      <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0 border-r-0'>
         <SocialMedia />
       </div>
     </footer>

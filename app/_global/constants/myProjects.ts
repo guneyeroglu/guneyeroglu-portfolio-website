@@ -10,6 +10,7 @@ import { IMyProject } from '@global/interfaces';
 
 export const myProjects: IMyProject[] = [
   {
+    id: 1,
     title: 'LC Waikiki Clone Web App',
     image: LCWMain,
     details: {
@@ -20,6 +21,7 @@ export const myProjects: IMyProject[] = [
     },
   },
   {
+    id: 2,
     title: 'Rick and Morty Wiki Web App',
     image: RickAndMortyMain,
     details: {
@@ -30,6 +32,7 @@ export const myProjects: IMyProject[] = [
     },
   },
   {
+    id: 3,
     title: 'Riot Games All in One Web App',
     image: RiotGamesMain,
     details: {
@@ -40,6 +43,7 @@ export const myProjects: IMyProject[] = [
     },
   },
   {
+    id: 4,
     title: 'House Rent Web App',
     image: RentHouseMain,
     details: {
@@ -50,6 +54,7 @@ export const myProjects: IMyProject[] = [
     },
   },
   {
+    id: 5,
     title: 'Wander Wheels Car Rental Web App',
     image: WanderWheelsMain,
     details: {

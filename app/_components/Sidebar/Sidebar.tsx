@@ -22,7 +22,7 @@ const Sidebar: FC = () => {
     'hover:text-success-700/hover': pathname === URLS.BLOG,
   };
 
-  const handleTooltipColor = () => {
+  const handleTooltipColor = (): string => {
     switch (pathname) {
       case URLS.HOME:
         return 'bg-purple-700';
@@ -38,8 +38,6 @@ const Sidebar: FC = () => {
         return 'bg-neutral-700';
     }
   };
-
-  const handleDownloadResume = (): void => {};
 
   return (
     <aside className='fixed top-[calc(1rem_+_56px)] bottom-[calc(1rem_+_56px)] left-4 max-w-14 w-full flex flex-col justify-center items-center border-1 border-divider border-t-0 border-b-0'>
@@ -87,7 +85,6 @@ const Sidebar: FC = () => {
             className={clsx({
               ...color,
             })}
-            onClick={handleDownloadResume}
           />
         </a>
       </Tooltip>

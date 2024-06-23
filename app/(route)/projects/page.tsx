@@ -1,9 +1,9 @@
 import { FC } from 'react';
 
 import ProjectCard from '@components/ProjectCard';
+import Drawer from '@components/Drawer';
+import { myProjects } from '@global/constants';
 import { IMyProject } from '@global/interfaces';
-
-import { myProjects } from './config';
 
 const HomePage: FC = () => {
   return (
@@ -13,16 +13,17 @@ const HomePage: FC = () => {
         <span className='text-warning-700'>{` projects `}</span>
         that i developed...
       </span>
-      <div className='w-full flex flex-row flex-wrap gap-y-12 my-12 max-sm:my-4'>
-        {myProjects.map((project: IMyProject, index: number) => (
+      <ul className='w-full flex flex-row flex-wrap gap-y-12 my-12 max-sm:my-4'>
+        {myProjects.map((project: IMyProject) => (
           <ProjectCard
-            key={project.title}
-            id={index + 1}
+            key={`${project.id}-${project.title}`}
+            id={project.id}
             label={project.title}
             logo={project.image}
           />
         ))}
-      </div>
+      </ul>
+      <Drawer />
     </div>
   );
 };

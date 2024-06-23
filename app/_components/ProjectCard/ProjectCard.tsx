@@ -1,6 +1,10 @@
+'use client';
+
 import { FC } from 'react';
 import { StaticImageData } from 'next/image';
 import clsx from 'clsx';
+
+import { useProjectStore } from '@store';
 
 interface IProps {
   id: number;
@@ -9,6 +13,8 @@ interface IProps {
 }
 
 const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
+  const { setProjectId } = useProjectStore();
+
   const addIdZero = (): string => {
     if (id <= 9) {
       return `0${id}`;
@@ -17,8 +23,10 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
     }
   };
 
+  const handleProjectId = (): void => setProjectId(id);
+
   return (
-    <div
+    <li
       className={clsx(
         'flex justify-center items-center px-8 max-lg:basis-full max-lg:px-0 max-lg:pr-8',
         {
@@ -27,7 +35,10 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
         },
       )}
     >
-      <button className='relative max-w-[500px] w-full h-72 cursor-pointer text-neutral-200 transition-all hover:text-warning-700 hover:scale-105 max-lg:max-w-full max-lg:hover:scale-100'>
+      <button
+        className='relative max-w-[500px] w-full h-72 cursor-pointer text-neutral-200 transition-all hover:text-warning-700 hover:scale-105 max-lg:max-w-full max-lg:hover:scale-100'
+        onClick={handleProjectId}
+      >
         <div
           key={id}
           className='w-full h-full opacity-85 ml-8 rounded-lg transition-all brightness-50 hover:brightness-100'
@@ -46,7 +57,7 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
           </span>
         </div>
       </button>
-    </div>
+    </li>
   );
 };
 
