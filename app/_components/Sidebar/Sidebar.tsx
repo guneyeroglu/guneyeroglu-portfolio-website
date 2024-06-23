@@ -4,7 +4,7 @@ import { FC, Fragment } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Tooltip } from '@nextui-org/react';
-import { Icon } from '@phosphor-icons/react';
+import { FileArrowDown, Icon } from '@phosphor-icons/react';
 import clsx from 'clsx';
 
 import { routes } from '@global/constants';
@@ -38,6 +38,8 @@ const Sidebar: FC = () => {
         return 'bg-neutral-700';
     }
   };
+
+  const handleDownloadResume = (): void => {};
 
   return (
     <aside className='fixed top-[calc(1rem_+_56px)] bottom-[calc(1rem_+_56px)] left-4 max-w-14 w-full flex flex-col justify-center items-center border-1 border-divider border-t-0 border-b-0'>
@@ -74,6 +76,21 @@ const Sidebar: FC = () => {
           );
         })}
       </div>
+      <Tooltip className={handleTooltipColor()} placement='right' content='Download CV'>
+        <a
+          className='absolute bottom-4 text-neutral-200/disabled cursor-pointer'
+          href='/resume.pdf'
+          download='Guney_Eroglu_CV.pdf'
+        >
+          <FileArrowDown
+            size={32}
+            className={clsx({
+              ...color,
+            })}
+            onClick={handleDownloadResume}
+          />
+        </a>
+      </Tooltip>
     </aside>
   );
 };
