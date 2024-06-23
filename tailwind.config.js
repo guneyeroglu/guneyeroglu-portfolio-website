@@ -104,7 +104,7 @@ const config = {
               DEFAULT: '#2428c9',
               foreground: '#c1d5ff',
             },
-            overlay: '#e6e6e61a',
+            overlay: '#000000CC',
             divider: '#fafafa',
           },
         },

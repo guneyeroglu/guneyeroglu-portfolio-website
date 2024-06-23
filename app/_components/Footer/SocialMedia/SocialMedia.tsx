@@ -2,15 +2,19 @@
 
 import { FC } from 'react';
 import { usePathname } from 'next/navigation';
+import { Tooltip } from '@nextui-org/react';
 import { Icon } from '@phosphor-icons/react';
 import clsx from 'clsx';
 
 import { socialMedias } from '@global/constants';
-import { URLS } from '@global/enums';
+import { DIRECTIONS, URLS } from '@global/enums';
 import { IColorClsx, ISocialMedia } from '@global/interfaces';
-import { Tooltip } from '@nextui-org/react';
 
-const SocialMedia: FC = () => {
+interface IProps {
+  direction?: keyof typeof DIRECTIONS;
+}
+
+const SocialMedia: FC<IProps> = ({ direction = DIRECTIONS.x }) => {
   const pathname: URLS = usePathname() as URLS;
 
   const color: IColorClsx = {
@@ -39,14 +43,19 @@ const SocialMedia: FC = () => {
   };
 
   return (
-    <div className='flex justify-center items-center'>
+    <div
+      className={clsx('flex justify-center items-center', {
+        'flex-row': direction === DIRECTIONS.x,
+        'flex-col': direction === DIRECTIONS.y,
+      })}
+    >
       {socialMedias.map((socialMedia: ISocialMedia) => {
         const Icon: Icon = socialMedia.icon;
 
         return (
           <Tooltip
             key={socialMedia.link}
-            placement='top'
+            placement={direction === DIRECTIONS.x ? 'top' : 'left'}
             content={socialMedia.label}
             className={handleTooltipColor()}
           >

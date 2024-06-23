@@ -9,7 +9,7 @@ interface IProps extends PropsWithChildren {}
 
 const Layout: FC<IProps> = ({ children }) => {
   return (
-    <div className='min-h-dvh max-h-dvh h-full flex flex-col items-stretch justify-between'>
+    <div className='h-dvh flex flex-col items-stretch justify-between'>
       <Header />
       <div className='flex flex-1 justify-start items-stretch m-[calc(1rem_+_56px)] mr-0 overflow-hidden'>
         <Sidebar />

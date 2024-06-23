@@ -21,7 +21,7 @@ const Drawer: FC = () => {
   return (
     <div className='fixed bottom-0 left-0 right-0 z-50'>
       <button
-        className={clsx('fixed inset-0 bg-neutral-950/80 cursor-default transition-all', {
+        className={clsx('fixed inset-0 bg-overlay cursor-default transition-all', {
           'opacity-100 pointer-events-auto': projectId,
           'opacity-0 pointer-events-none': !projectId,
         })}
@@ -37,7 +37,7 @@ const Drawer: FC = () => {
           <div className='w-full h-full p-4'>
             <div className='flex items-center justify-end'>
               <Button isIconOnly variant='solid' color='danger' onClick={clearProjectId}>
-                <X className='text-neutral-200' size={24} weight='bold' />
+                <X className='text-neutral-200' size={20} weight='bold' />
               </Button>
             </div>
             <div className='w-full h-full flex items-center justify-center'>

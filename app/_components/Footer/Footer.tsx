@@ -12,6 +12,7 @@ import { IColorClsx } from '@global/interfaces';
 import { useMeStore } from '@store';
 
 import SocialMedia from './SocialMedia';
+import PopoverSocialMedia from './PopoverSocialMedia/PopoverSocialMedia';
 
 const Footer: FC = () => {
   const pathname: URLS = usePathname() as URLS;
@@ -76,7 +77,7 @@ const Footer: FC = () => {
 
   return (
     <footer className='fixed inset-4 top-auto flex justify-between items-center h-14 border-r-1 border-r-divider'>
-      <div className='h-full flex flex-1 justify-start items-center border-1 border-divider border-l-0 border-r-0'>
+      <div className='h-full flex flex-1 justify-start items-center border-1 border-divider border-l-0 border-r-0 max-md:flex-none'>
         <Tooltip
           isDisabled={pathname !== URLS.ABOUT && pathname !== URLS.REAL_ME}
           content={handleTooltipText()}
@@ -100,7 +101,7 @@ const Footer: FC = () => {
         </Tooltip>
       </div>
       <div className='h-full flex flex-1 justify-center items-center border-1 border-divider border-l-0 border-r-0'>
-        <span className='text-base font-normal text-neutral-400'>
+        <span className='text-base text-center font-normal text-neutral-400 max-sm:text-sm'>
           © 2024 by
           <Link
             href={URLS.ABOUT}
@@ -112,8 +113,13 @@ const Footer: FC = () => {
           </Link>
         </span>
       </div>
-      <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0 border-r-0'>
-        <SocialMedia />
+      <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0 border-r-0 max-md:flex-none max-md:pr-4 max-md:justify-center'>
+        <div className='block max-md:hidden'>
+          <SocialMedia />
+        </div>
+        <div className='hidden items-center justify-center max-md:block'>
+          <PopoverSocialMedia />
+        </div>
       </div>
     </footer>
   );
