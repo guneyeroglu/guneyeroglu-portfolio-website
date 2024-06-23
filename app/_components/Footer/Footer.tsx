@@ -99,9 +99,9 @@ const Footer: FC = () => {
           </div>
         </Tooltip>
       </div>
-      <div className='h-full flex flex-1 justify-center items-center border-1 border-divider border-l-0 border-r-0 max-md:hidden'>
+      <div className='h-full flex flex-1 justify-center items-center border-1 border-divider border-l-0 border-r-0'>
         <span className='text-base font-normal text-neutral-400'>
-          Created by
+          © 2024 by
           <Link
             href={URLS.ABOUT}
             className={clsx('cursor-pointer', {
@@ -110,7 +110,6 @@ const Footer: FC = () => {
           >
             {pathname !== URLS.REAL_ME ? ` Güney Eroğlu ` : ` Spider-Man `}
           </Link>
-          ©2024™
         </span>
       </div>
       <div className='h-full flex flex-1 justify-end items-center border-1 border-divider border-l-0 border-r-0'>

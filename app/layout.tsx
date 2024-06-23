@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <html lang='tr' className='dark text-foreground bg-background'>
+    <html lang='en' className='dark text-foreground bg-background'>
       <body className={roboto.className}>
         <NextUIProvider>
           <Layout>{children}</Layout>

@@ -21,7 +21,7 @@ const Drawer: FC = () => {
   return (
     <div className='fixed bottom-0 left-0 right-0 z-50'>
       <button
-        className={clsx('fixed inset-0 bg-neutral-800/50 cursor-default transition-all', {
+        className={clsx('fixed inset-0 bg-neutral-950/80 cursor-default transition-all', {
           'opacity-100 pointer-events-auto': projectId,
           'opacity-0 pointer-events-none': !projectId,
         })}

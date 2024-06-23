@@ -29,9 +29,9 @@ const MeCard: FC<IProps> = ({ label, contents }) => {
         {contents.map((content: IContent) => (
           <div
             key={content.title}
-            className='w-full flex justify-start items-start gap-2 max-sm:flex-col max-md:flex-1 max-md:basis-[calc(50%_-_2rem)] max-md:p-1 max-sm:basis-full'
+            className='w-full flex justify-start items-start gap-2 max-sm:flex-col max-md:flex-1 max-md:basis-[calc(50%_-_2rem)] max-md:max-w-[50%] max-md:p-1 max-sm:max-w-full max-sm:basis-full'
           >
-            <span className='min-w-[20%] font-medium text-neutral-200 text-end max-md:text-start'>
+            <span className='min-w-[20%] font-medium text-neutral-200 text-end max-md:text-start max-md:min-w-fit'>
               {`${content.title}:`}
             </span>
             <span className='text-neutral-200/disabled break-all'>{content.description}</span>
