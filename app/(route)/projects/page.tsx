@@ -5,7 +5,7 @@ import Drawer from '@components/Drawer';
 import { myProjects } from '@global/constants';
 import { IMyProject } from '@global/interfaces';
 
-const HomePage: FC = () => {
+const ProjectsPage: FC = () => {
   return (
     <div className='flex flex-col justify-start items-start p-16 max-lg:p-8 max-sm:p-2'>
       <span className='text-3xl text-neutral-200 ml-12 max-lg:ml-8 max-sm:text-xl'>
@@ -13,7 +13,7 @@ const HomePage: FC = () => {
         <span className='text-warning-700'>{` projects `}</span>
         that i developed...
       </span>
-      <ul className='w-full flex flex-row flex-wrap gap-y-12 my-12 max-sm:my-4'>
+      <ul className='w-full flex flex-row flex-wrap gap-y-12 my-12 max-lg:my-8 max-sm:my-2'>
         {myProjects.map((project: IMyProject) => (
           <ProjectCard
             key={`${project.id}-${project.title}`}
@@ -28,4 +28,4 @@ const HomePage: FC = () => {
   );
 };
 
-export default HomePage;
+export default ProjectsPage;

@@ -2,6 +2,6 @@ export enum URLS {
   HOME = '/',
   ABOUT = '/about',
   PROJECTS = '/projects',
-  BLOG = '/blog',
+  CONTACT = '/contact',
   REAL_ME = '/real-me',
 }

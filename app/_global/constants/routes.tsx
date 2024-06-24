@@ -25,8 +25,8 @@ export const routes: IRoute[] = [
   },
   {
     icon: Files,
-    pathname: URLS.BLOG,
-    title: 'Blog',
+    pathname: URLS.CONTACT,
+    title: 'Contact',
   },
   {
     icon: Spider,

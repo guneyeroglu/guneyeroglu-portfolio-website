@@ -19,7 +19,7 @@ const Sidebar: FC = () => {
     'hover:text-neutral-500/hover': pathname === URLS.ABOUT,
     'hover:text-danger-700/hover': pathname === URLS.REAL_ME,
     'hover:text-warning-700/hover': pathname === URLS.PROJECTS,
-    'hover:text-success-700/hover': pathname === URLS.BLOG,
+    'hover:text-success-700/hover': pathname === URLS.CONTACT,
   };
 
   const handleTooltipColor = (): string => {
@@ -32,7 +32,7 @@ const Sidebar: FC = () => {
         return 'bg-danger-700';
       case URLS.PROJECTS:
         return 'bg-warning-700';
-      case URLS.BLOG:
+      case URLS.CONTACT:
         return 'bg-success-700';
       default:
         return 'bg-neutral-700';

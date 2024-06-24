@@ -17,7 +17,7 @@ const BackgroundCircles: FC = () => {
           'right-16 bottom-64 bg-neutral-500/40': pathname === URLS.ABOUT,
           'right-16 bottom-64 bg-danger-500/40': pathname === URLS.REAL_ME,
           'right-16 top-64 bg-warning-500/40': pathname === URLS.PROJECTS,
-          'left-20 bottom-20 bg-success-500/40': pathname === URLS.BLOG,
+          'left-20 bottom-20 bg-success-500/40': pathname === URLS.CONTACT,
         })}
       />
       <div
@@ -26,7 +26,7 @@ const BackgroundCircles: FC = () => {
           'left-16 top-64 bg-neutral-500/40': pathname === URLS.ABOUT,
           'left-16 top-64 bg-danger-500/40': pathname === URLS.REAL_ME,
           'left-16 bottom-64 bg-warning-500/40': pathname === URLS.PROJECTS,
-          'right-32 top-32 bg-success-500/40': pathname === URLS.BLOG,
+          'right-32 top-32 bg-success-500/40': pathname === URLS.CONTACT,
         })}
       />
     </>

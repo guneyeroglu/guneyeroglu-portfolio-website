@@ -23,7 +23,7 @@ const Footer: FC = () => {
     'hover:text-neutral-500/hover': pathname === URLS.ABOUT,
     'hover:text-danger-700/hover': pathname === URLS.REAL_ME,
     'hover:text-warning-700/hover': pathname === URLS.PROJECTS,
-    'hover:text-success-700/hover': pathname === URLS.BLOG,
+    'hover:text-success-700/hover': pathname === URLS.CONTACT,
   };
 
   const colorDot: IColorClsx = {
@@ -31,7 +31,7 @@ const Footer: FC = () => {
     'text-neutral-700': (!hover && pathname === URLS.ABOUT) || (hover && pathname === URLS.REAL_ME),
     'text-danger-700': (!hover && pathname === URLS.REAL_ME) || (hover && pathname === URLS.ABOUT),
     'text-warning-700': pathname === URLS.PROJECTS,
-    'text-success-700': pathname === URLS.BLOG,
+    'text-success-700': pathname === URLS.CONTACT,
   };
 
   const Wrapper: FC<PropsWithChildren> = ({ children }) => {

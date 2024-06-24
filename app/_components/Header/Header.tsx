@@ -16,7 +16,7 @@ const Header: FC = () => {
     'text-neutral-500': pathname === URLS.ABOUT,
     'text-danger-700': pathname === URLS.REAL_ME,
     'text-warning-700': pathname === URLS.PROJECTS,
-    'text-success-700': pathname === URLS.BLOG,
+    'text-success-700': pathname === URLS.CONTACT,
   };
 
   return (
