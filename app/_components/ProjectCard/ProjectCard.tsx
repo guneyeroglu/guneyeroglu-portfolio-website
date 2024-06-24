@@ -30,8 +30,8 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
       className={clsx(
         'flex justify-center items-center px-8 max-lg:basis-full max-lg:px-0 max-lg:pr-8',
         {
-          'min-[1024px]:basis-1/2': id % 3 !== 0 || id === 1 || id === 2,
-          'min-[1024px]:basis-full': id % 3 === 0,
+          'min-[1025px]:basis-1/2': id % 3 !== 0 || id === 1 || id === 2,
+          'min-[1025px]:basis-full': id % 3 === 0,
         },
       )}
     >

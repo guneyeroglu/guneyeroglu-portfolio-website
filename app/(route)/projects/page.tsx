@@ -7,7 +7,7 @@ import { IMyProject } from '@global/interfaces';
 
 const HomePage: FC = () => {
   return (
-    <div className='flex flex-col justify-start items-start'>
+    <div className='flex flex-col justify-start items-start p-16 max-lg:p-8 max-sm:p-2'>
       <span className='text-3xl text-neutral-200 ml-12 max-lg:ml-8 max-sm:text-xl'>
         A few
         <span className='text-warning-700'>{` projects `}</span>
