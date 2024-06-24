@@ -8,7 +8,7 @@ import { meCards } from './config';
 
 const RealMePage: FC = () => {
   return (
-    <div className='w-full max-w-screen-md m-auto mt-16 mb-16 flex flex-col justify-start items-center gap-12'>
+    <div className='w-full max-w-screen-lg m-auto p-16 flex flex-col justify-start items-center gap-12 max-lg:p-8 max-sm:p-2'>
       {meCards.map((meCard: IMeCard, index: number) => (
         <div
           key={meCard.label}
