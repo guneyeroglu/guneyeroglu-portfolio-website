@@ -14,10 +14,13 @@ export const myProjects: IMyProject[] = [
     title: 'LC Waikiki Clone Web App',
     image: LCWMain,
     details: {
-      link: 'https://lcwaikikiclone.vercel.app',
+      links: {
+        website: 'https://lcwaikikiclone.vercel.app',
+        linkedIn: '',
+        github: [''],
+      },
+      description: `This project aims to create a clone of LC Waikiki's e-commerce website. Users can list products, search and sort among listed items, add liked products to favorites, and view them in a list. Finally, they can proceed with purchasing their selected items.`,
       techs: [TECHS.React, TECHS.JavaScript, TECHS.SCSS],
-      description: '',
-      images: [''],
     },
   },
   {
@@ -25,10 +28,13 @@ export const myProjects: IMyProject[] = [
     title: 'Rick and Morty Wiki Web App',
     image: RickAndMortyMain,
     details: {
-      link: 'https://wiki-rickandmorty.vercel.app',
+      links: {
+        website: 'https://wiki-rickandmorty.vercel.app',
+        linkedIn: '',
+        github: [''],
+      },
+      description: `This project is a web application that lists the characters, episodes, and locations from the Rick and Morty TV show. Users can add characters to their favorites and view their favorite list. Additionally, they can list the characters appearing in specific episodes and locations.`,
       techs: [TECHS.React, TECHS.JavaScript, TECHS.SCSS],
-      description: '',
-      images: [''],
     },
   },
   {
@@ -36,10 +42,13 @@ export const myProjects: IMyProject[] = [
     title: 'Riot Games All in One Web App',
     image: RiotGamesMain,
     details: {
-      link: 'https://riotgamesallinone.vercel.app',
+      links: {
+        website: 'https://riotgamesallinone.vercel.app',
+        linkedIn: '',
+        github: [''],
+      },
+      description: `This project is a web application related to League of Legends (LoL) and Valorant. Users can list and explore the details of champions and regions in LoL. Similarly, in Valorant, users can list the agents, maps, and weapons, view their features, and learn about them.`,
       techs: [TECHS.React, TECHS.TypeScript, TECHS.SCSS],
-      description: '',
-      images: [''],
     },
   },
   {
@@ -47,10 +56,13 @@ export const myProjects: IMyProject[] = [
     title: 'House Rent Web App',
     image: RentHouseMain,
     details: {
-      link: 'https://rent-house-ng.vercel.app/home',
+      links: {
+        website: 'https://rent-house-ng.vercel.app/home',
+        linkedIn: '',
+        github: [''],
+      },
+      description: `This project is a web application called House Rent. Users can list houses and search for them. Additionally, they can view details and learn more about the houses.`,
       techs: [TECHS.Angular, TECHS.TypeScript, TECHS.SCSS],
-      description: '',
-      images: [''],
     },
   },
   {
@@ -58,10 +70,13 @@ export const myProjects: IMyProject[] = [
     title: 'Wander Wheels Car Rental Web App',
     image: WanderWheelsMain,
     details: {
-      link: 'https://wander-wheels.vercel.app',
+      links: {
+        website: 'https://wander-wheels.vercel.app',
+        linkedIn: '',
+        github: [''],
+      },
+      description: `Wander Wheels is a car rental website. Users can list cars based on selected dates and locations and filter them by specific features. They can then view detailed information about the car and see the total rental cost. If the rental terms are satisfactory, they can proceed to rent the car.`,
       techs: [TECHS.React, TECHS.TypeScript, TECHS.Tailwind, TECHS.Go, TECHS.Fiber],
-      description: '',
-      images: [''],
     },
   },
 ];

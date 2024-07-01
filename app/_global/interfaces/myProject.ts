@@ -7,9 +7,12 @@ export interface IMyProject {
   title: string;
   image: StaticImageData;
   details: {
-    link: string;
-    techs: (keyof typeof TECHS)[];
+    links: {
+      website: string;
+      github: string[];
+      linkedIn: string;
+    };
     description: string;
-    images: string[];
+    techs: (keyof typeof TECHS)[];
   };
 }

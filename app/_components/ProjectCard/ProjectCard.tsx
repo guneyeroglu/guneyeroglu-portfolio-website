@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { StaticImageData } from 'next/image';
 import clsx from 'clsx';
 
+import { addZeroToId } from '@global/utils/functions';
 import { useProjectStore } from '@store';
 
 interface IProps {
@@ -14,14 +15,6 @@ interface IProps {
 
 const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
   const { setProjectId } = useProjectStore();
-
-  const addIdZero = (): string => {
-    if (id <= 9) {
-      return `0${id}`;
-    } else {
-      return `${id}`;
-    }
-  };
 
   const handleProjectId = (): void => setProjectId(id);
 
@@ -53,7 +46,7 @@ const ProjectCard: FC<IProps> = ({ id, label, logo }) => {
         <div className='absolute bottom-2 left-0 max-w-28 text-left py-4 flex flex-col'>
           <span className='text-base text-current font-medium'>{label}</span>
           <span className='text- base text-current font-light border-t-1.5 border-t-current mt-2 pt-2'>
-            {addIdZero()}
+            {addZeroToId(id)}
           </span>
         </div>
       </button>

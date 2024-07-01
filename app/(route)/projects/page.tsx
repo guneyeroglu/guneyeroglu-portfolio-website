@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import ProjectCard from '@components/ProjectCard';
-import Drawer from '@components/Drawer';
+import ProjectDrawer from '@components/ProjectDrawer';
 import { myProjects } from '@global/constants';
 import { IMyProject } from '@global/interfaces';
 
@@ -23,7 +23,7 @@ const ProjectsPage: FC = () => {
           />
         ))}
       </ul>
-      <Drawer />
+      <ProjectDrawer />
     </div>
   );
 };
