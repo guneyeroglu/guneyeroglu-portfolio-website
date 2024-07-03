@@ -8,9 +8,9 @@ export interface IMyProject {
   image: StaticImageData;
   details: {
     links: {
-      website: string;
-      github: string[];
-      linkedIn: string;
+      website?: string;
+      gitHub?: string[];
+      linkedIn?: string;
     };
     description: string;
     techs: (keyof typeof TECHS)[];

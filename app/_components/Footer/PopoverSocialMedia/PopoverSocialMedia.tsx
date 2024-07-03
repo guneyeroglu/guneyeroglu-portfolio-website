@@ -22,7 +22,7 @@ const PopoverSocialMedia: FC = () => {
 
   return (
     <Popover showArrow backdrop='opaque'>
-      <PopoverTrigger>
+      <PopoverTrigger className='aria-expanded:scale-100'>
         <div
           className={clsx({
             ...color,

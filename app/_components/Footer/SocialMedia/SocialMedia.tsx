@@ -18,11 +18,11 @@ const SocialMedia: FC<IProps> = ({ direction = DIRECTIONS.x }) => {
   const pathname: URLS = usePathname() as URLS;
 
   const color: IColorClsx = {
-    'lg:hover:text-purple-700/hover text-purple-700/hover': pathname === URLS.HOME,
-    'lg:hover:text-neutral-500/hover text-neutral-500/hover': pathname === URLS.ABOUT,
-    'lg:hover:text-danger-700/hover text-danger-700/hover': pathname === URLS.REAL_ME,
-    'lg:hover:text-warning-700/hover text-warning-700/hover': pathname === URLS.PROJECTS,
-    'lg:hover:text-success-700/hover text-success-700/hover': pathname === URLS.CONTACT,
+    'hover:text-purple-700/hover': pathname === URLS.HOME,
+    'hover:text-neutral-500/hover': pathname === URLS.ABOUT,
+    'hover:text-danger-700/hover': pathname === URLS.REAL_ME,
+    'hover:text-warning-700/hover': pathname === URLS.PROJECTS,
+    'hover:text-success-700/hover': pathname === URLS.CONTACT,
   };
 
   const handleTooltipColor = (): string => {
@@ -62,7 +62,7 @@ const SocialMedia: FC<IProps> = ({ direction = DIRECTIONS.x }) => {
             <a
               href={socialMedia.link}
               target='_blank'
-              className={clsx('p-4 cursor-pointer md:text-neutral-400', {
+              className={clsx('p-4 cursor-pointer text-neutral-400', {
                 ...color,
               })}
             >
