@@ -29,7 +29,7 @@ const ContactPage: FC = () => {
         <CardFooter className='p-0 bg-success-500 hover:bg-success-700/hover'>
           <a
             href={`mailto:${myMail}`}
-            className='w-full flex justify-center items-center py-2 text-success-50'
+            className='w-full flex justify-center items-center py-2 text-success-50 max-xxs:text-sm'
           >
             Mail Me
           </a>
