@@ -40,7 +40,7 @@ const Sidebar: FC = () => {
   };
 
   return (
-    <aside className='fixed top-[calc(1rem_+_56px)] bottom-[calc(1rem_+_56px)] left-4 max-w-14 w-full flex flex-col justify-center items-center border-1 border-divider border-t-0 border-b-0'>
+    <aside className='sticky inset-0 ml-4 max-w-14 w-full flex flex-col justify-center items-center border-1 border-divider border-t-0 border-b-0'>
       <div className='relative flex flex-col justify-center items-center gap-2'>
         {routes.map((route: IRoute) => {
           if (route.pathname === URLS.REAL_ME && pathname !== URLS.REAL_ME) {

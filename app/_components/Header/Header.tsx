@@ -20,7 +20,7 @@ const Header: FC = () => {
   };
 
   return (
-    <header className='fixed inset-4 flex justify-between items-center h-14'>
+    <header className='sticky inset-0 m-4 mb-0 flex justify-between items-center h-14'>
       <div className='h-full border-1 border-divider border-l-0 border-r-0'>
         <div
           className={clsx(

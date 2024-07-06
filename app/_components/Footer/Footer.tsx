@@ -76,7 +76,7 @@ const Footer: FC = () => {
   };
 
   return (
-    <footer className='fixed inset-4 top-auto flex justify-between items-center h-14 border-r-1 border-r-divider'>
+    <footer className='sticky inset-0 m-4 mt-0 top-auto flex justify-between items-center h-14 border-r-1 border-r-divider'>
       <div className='h-full flex flex-1 justify-start items-center border-1 border-divider border-l-0 border-r-0 max-md:flex-none'>
         <Tooltip
           isDisabled={pathname !== URLS.ABOUT && pathname !== URLS.REAL_ME}
