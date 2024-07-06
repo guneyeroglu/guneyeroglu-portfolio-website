@@ -13,7 +13,7 @@ const ProjectsPage: FC = () => {
         <span className='text-warning-700'>{` projects `}</span>
         that i developed...
       </span>
-      <ul className='w-full flex flex-row flex-wrap gap-y-12 my-12 max-lg:my-8 max-sm:my-2'>
+      <ul className='w-full flex flex-row flex-wrap gap-y-12 mt-12 max-lg:mt-8 max-sm:mt-2'>
         {myProjects.map((project: IMyProject) => (
           <ProjectCard
             key={`${project.id}-${project.title}`}
