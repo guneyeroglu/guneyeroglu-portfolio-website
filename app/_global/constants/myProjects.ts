@@ -4,6 +4,7 @@ import {
   RiotGamesMain,
   RentHouseMain,
   WanderWheelsMain,
+  CineCornMain,
 } from '@assets/images';
 import { TECHS } from '@global/enums';
 import { IMyProject } from '@global/interfaces';
@@ -81,6 +82,24 @@ export const myProjects: IMyProject[] = [
       },
       description: `Wander Wheels is a car rental website. Users can list cars based on selected dates and locations and filter them by specific features. They can then view detailed information about the car and see the total rental cost. If the rental terms are satisfactory, they can proceed to rent the car.`,
       techs: [TECHS.React, TECHS.TypeScript, TECHS.Tailwind, TECHS.Go, TECHS.Fiber],
+    },
+  },
+  {
+    id: 6,
+    title: 'CineCorn Movie Web App',
+    image: CineCornMain,
+    details: {
+      links: {
+        website: 'https://cinecorn.vercel.app',
+        linkedIn:
+          'https://www.linkedin.com/posts/guneyeroglu_angular-angular-golang-activity-7248649770259365888-eO-x',
+        gitHub: [
+          'https://github.com/guneyeroglu/cine-corn-fe',
+          'https://github.com/guneyeroglu/cine-corn-be',
+        ],
+      },
+      description: `CineCorn is a movie web application where users can browse and explore a wide range of movies. Logged-in users have the ability to add or remove movies from their favorites or personal lists. The application provides detailed information about each movie, including genres, star actors, duration, and description, enhancing the overall user experience.`,
+      techs: [TECHS.Angular, TECHS.TypeScript, TECHS.SCSS, TECHS.Go, TECHS.Fiber],
     },
   },
 ];
