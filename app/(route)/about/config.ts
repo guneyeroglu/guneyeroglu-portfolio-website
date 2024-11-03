@@ -1,5 +1,4 @@
 import { IContent, IMeCard } from '@global/interfaces';
-import { calculateAge } from '@global/utils/functions';
 
 const me: IContent[] = [
   {
@@ -8,7 +7,7 @@ const me: IContent[] = [
   },
   {
     title: 'Age',
-    description: String(calculateAge(new Date('1995-10-17'))),
+    description: '29',
   },
   {
     title: 'Job',
