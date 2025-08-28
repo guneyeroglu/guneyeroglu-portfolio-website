@@ -34,7 +34,7 @@ const MeCard: FC<IProps> = ({ label, contents }) => {
             <span className='min-w-[20%] font-medium text-neutral-200 text-end max-md:text-start max-md:min-w-fit'>
               {`${content.title}:`}
             </span>
-            <span className='text-neutral-200/disabled break-all'>{content.description}</span>
+            <span className='text-neutral-200/disabled break-words'>{content.description}</span>
           </div>
         ))}
       </CardBody>

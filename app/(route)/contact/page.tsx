@@ -20,7 +20,7 @@ const ContactPage: FC = () => {
               <span className='min-w-[25%] text-success-50 text-end max-sm:text-start max-xxs:text-sm'>
                 {content.title}:
               </span>
-              <span className='text-neutral-400 break-all max-xxs:text-sm'>
+              <span className='text-neutral-400 break-words max-xxs:text-sm'>
                 {content.description}
               </span>
             </div>
