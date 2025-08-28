@@ -77,8 +77,8 @@ const Sidebar: FC = () => {
       <Tooltip className={handleTooltipColor()} placement='right' content='Download CV'>
         <a
           className='absolute bottom-4 text-neutral-200/disabled cursor-pointer'
-          href='/Guney_Eroglu_CV.pdf'
-          download='Guney_Eroglu_CV.pdf'
+          href='/Guney_Eroglu_Resume.pdf'
+          download='Guney_Eroglu_Resume.pdf'
         >
           <FileArrowDown
             size={32}
